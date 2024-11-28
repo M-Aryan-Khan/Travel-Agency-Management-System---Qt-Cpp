@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>searchUsers</class>
+ <widget class="QDialog" name="searchUsers">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>750</width>
+    <height>310</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{font-family:century gothic;
+color:white;
+}
+#head{
+border-bottom-left-radius:15px;
+border-bottom-right-radius:15px;
+background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 #F4D03F, stop:0.75 #16A085);
+font-size:24px;
+font-weight:bold;
+}
+#searchUsers{
+background:#282828;
+}
+QLineEdit{
+font-size:16px;
+background:white;
+color:black;
+font-weight:bold;
+}
+QTreeWidget{
+color:black;
+background:white;
+}
+QLabel{
+font-size:16px;
+}
+QPushButton {
+font-size:15px;
+font-weight:bold;
+border:none;
+border-radius:5px;
+background: #ff0303;
+}
+
+QPushButton:hover {
+background:#49ebff;
+color:black;
+}</string>
+  </property>
+  <widget class="QTreeWidget" name="CustomerDetialsView">
+   <property name="geometry">
+    <rect>
+     <x>17</x>
+     <y>170</y>
+     <width>711</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string notr="true">1</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QLabel" name="head">
+   <property name="geometry">
+    <rect>
+     <x>-3</x>
+     <y>0</y>
+     <width>751</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>SEARCH USER</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="CustomerDetialsLabel">
+   <property name="geometry">
+    <rect>
+     <x>17</x>
+     <y>145</y>
+     <width>141</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Customer Details</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>227</x>
+     <y>60</y>
+     <width>291</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QLabel" name="getCustomerIdLabel">
+      <property name="text">
+       <string>Enter Customer ID</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="getCustomerIdEdit"/>
+    </item>
+    <item>
+     <widget class="QPushButton" name="searchButton">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="pics.qrc">
+        <normaloff>:/search.svg</normaloff>:/search.svg</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="cancelButton">
+   <property name="geometry">
+    <rect>
+     <x>660</x>
+     <y>280</y>
+     <width>84</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Back</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="pics.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>deletePackage</class>
+ <widget class="QDialog" name="deletePackage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>396</width>
+    <height>200</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{font-family:century gothic;
+color:white;
+}
+#deletePackage{
+background:#282828;
+}
+QLabel{
+font-size:16px;
+}
+#head{
+border-bottom-left-radius:15px;
+border-bottom-right-radius:15px;
+background: qlineargradient(x0: 1, y1: 1, x2: 0, y2: 0.7, stop: 0 #fffbd5, stop: 1 #b20a2c);
+font-size:24px;
+font-weight:bold;
+}
+QPushButton {
+font-size:15px;
+font-weight:bold;
+border:none;
+border-radius:5px;
+background: #ff0303;
+}
+QCheckBox{
+background:white;
+}
+QPushButton:hover {
+background:#49ebff;
+color:black;
+}
+QComboBox{
+font-size:16px;
+background:#3e3f40;
+}
+
+QComboBox QAbstractItemView {
+font-size:16px;
+background-color:#3e3f40;
+color:white;
+}</string>
+  </property>
+  <widget class="QPushButton" name="cancelButton">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>165</y>
+     <width>96</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="head">
+   <property name="geometry">
+    <rect>
+     <x>1</x>
+     <y>-5</y>
+     <width>395</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>DELETE PACKAGE</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget_3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>45</y>
+     <width>381</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <widget class="QLabel" name="packageLabel">
+      <property name="text">
+       <string>Select Package</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="packageSelect">
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="deleteButton">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>165</y>
+     <width>96</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Delete</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>125</y>
+     <width>17</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="confirmLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>120</y>
+     <width>361</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Are you sure you wanna delete this package?</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

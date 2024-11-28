@@ -1,0 +1,2191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>System</class>
+ <widget class="QMainWindow" name="System">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1541</width>
+    <height>843</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{font-family:century gothic;
+}
+QMainWindow{
+background:url(:/system.jpg)
+}
+#stackedWidget{
+background-color: rgba(0, 0, 0, 191);
+}
+#accMenu,#header,#side_menu{
+background-color: rgba(0, 0, 0, 230);
+}
+#header{
+border:none;
+}
+#closeWindow{
+background-color:transparent;
+}
+#closeWindow:hover{
+background-color:red;
+}
+#date,#time{
+color:white;
+font-weight:bold;
+font-size:20px;
+}
+#time{
+font-size:30px;
+}
+#logo,#logoMenu, #side_menu_open, #customer, #home,#packages,#exit{
+background-color:transparent;
+}
+#home:hover, #customer:hover,#side_menu_open:hover,#packages:hover,#home:hover,#exit:hover{
+    background-color: #fb0200;
+}
+#customerText, #homeText,#packagesText,#exitText{
+color:white;
+font-size:15px;
+font-weight:bold;
+}
+#small_side_menu,#side_menu{
+border:none;
+border-radius:30px;
+}
+#accLogo{
+background:#fb0200;
+border-radius:35px;
+}
+#accLogo:hover{
+background:#ff4040
+}
+#accMenu{
+border-radius:20px;
+background-color:black;
+}
+#adminMenu{
+background-color: rgba(0, 0, 0, 230);
+border-radius:20px;
+background-color:black;
+}
+#adminInfoButton,#signOutButton{
+background:transparent;
+}
+#adminInfoButton:hover,#signOutButton:hover{
+background-color: #fb0200;
+}
+#viewAdminButton,#editAdminButton{
+background:transparent;
+}
+#viewAdminButton:hover,#editAdminButton:hover{
+background-color: #fb0200;
+}
+#sortupid, #sortupname, #sortupprice, #sortuptravelers{
+background:transparent;
+}
+#name,#logo{
+background:transparent;
+font-size:50px;
+font-weight:bold;
+color:white;
+}
+#Pbg,#Dbg,#Cbg,#PRbg,#Rbg{
+border-radius:20px;
+}
+#Dlogo,#Clogo,#Plogo,#Rlogo,#PRlogo{
+background:transparent;
+border:none;
+}
+#DText,#PText,#CText,#RText,#PRText{
+background:transparent;
+color:white;
+font-size:20px;
+font-weight:bold;
+}
+#Dcount,#Ccount,#Pcount,#PRcount,#Rcount{
+background:transparent;
+color:white;
+font-size:50px;
+}
+#Dcount,#PRcount{
+font-size:40px;
+}
+#Cbg{
+background:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.979, fx:0.5, fy:0.5, stop:0.187793 rgba(213, 89, 50, 255), stop:1 rgba(260, 260, 260, 260))
+}
+#Pbg{
+background:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.979, fx:0.5, fy:0.5, stop:0.187793 rgba(17, 197, 187, 255), stop:1 rgba(260, 260, 260, 260))
+}
+#Dbg{
+background:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.979, fx:0.5, fy:0.5, stop:0.187793 rgba(177, 14, 65, 255), stop:1 rgba(260, 260, 260, 260))
+}
+#Rbg{
+background:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.979, fx:0.5, fy:0.5, stop:0.187793 rgba(213, 132, 0, 255), stop:1 rgba(260, 260, 260, 260))
+}
+#PRbg{
+background:qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.979, fx:0.5, fy:0.5, stop:0.187793 rgba(17, 197, 127, 255), stop:1 rgba(260, 260, 260, 260))
+}
+#Crefresh,#Prefresh,#PRrefresh,#Rrefresh,#Drefresh{
+background-color:transparent;
+}
+#accMenuHead,#adminInfo,#signOut,#viewAdminInfo,#editAdminInfo{
+background:transparent;
+border:none;
+color:white;
+font-size:15px;
+}
+#accMenuHead{
+border-bottom:1px solid #717072;
+}
+
+QTreeWidget{
+font-size:18px;
+border-radius : 10px;
+border: 4px solid red;
+}
+
+#displayCustomers,#displayPackage{
+border:none;
+background: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 1, stop: 0 #00DBDE, stop: 1 #FC00FF);
+border-radius: 6px;
+font-weight:bold;
+font-size:20px;
+color: white;
+padding: 10px;
+}
+#displayCustomers:hover,#displayPackage:hover{
+background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #FC00FF, stop:1 #00DBDE);
+border: none;
+border-radius: 6px;
+font-weight:bold;
+color: white;
+padding: 10px;
+}
+
+#addCustomer,#addPackage{
+border:none;
+background: qlineargradient(spread:pad, x0:1, y1:0, x2:1, y2:1,stop:0 #6284FF, stop:1 #FF0000);
+border-radius: 6px;
+font-weight:bold;
+font-size:20px;
+color: white;
+padding: 10px;
+}
+#addCustomer:hover,#addPackage:hover{
+background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0,stop:0 #6284FF, stop:1 #FF0000);
+border: none;
+border-radius: 6px;
+font-weight:bold;
+color: white;
+padding: 10px;
+}
+
+#updateCustomer,#updatePackage{
+border:none;
+background:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 #FFE53B, stop:0.74 #FF2525);
+border-radius: 6px;
+font-weight:bold;
+font-size:20px;
+color: white;
+padding: 10px;
+}
+#updateCustomer:hover,#updatePackage:hover{
+background:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #FFE53B, stop:0.74 #FF2525);
+border: none;
+border-radius: 6px;
+font-weight:bold;
+color: white;
+padding: 10px;
+}
+
+#deleteCustomer,#deletePackage{
+border:none;
+background: qlineargradient(x0: 1, y1: 1, x2: 0, y2: 0.7, stop: 0 #fffbd5, stop: 1 #b20a2c);
+border-radius: 6px;
+font-weight:bold;
+font-size:20px;
+color: white;
+padding: 10px;
+}
+#deleteCustomer:hover,#deletePackage:hover{
+background: qlineargradient(x0: 1, y1: 0, x2: 0, y2: 0.7, stop: 0 #fffbd5, stop: 1 #b20a2c);
+border: none;
+border-radius: 6px;
+font-weight:bold;
+color: white;
+padding: 10px;
+}
+
+#searchCustomer,#searchPackage{
+border:none;
+background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 #F4D03F, stop:1 #16A085);
+border-radius: 6px;
+font-weight:bold;
+font-size:20px;
+color: white;
+padding: 10px;
+}
+#searchCustomer:hover,#searchPackage:hover{
+background:  qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #F4D03F, stop:1 #16A085);
+border: none;
+border-radius: 6px;
+font-weight:bold;
+color: white;
+padding: 10px;
+}
+
+#displayCustomerIcon,#searchCustomerIcon,#addCustomerIcon,#updateCustomerIcon,#deleteCustomerIcon,#displayPackageIcon,#searchPackageIcon,#addPackageIcon,#updatePackageIcon,#deletePackageIcon{
+background-color:none;
+background:transparent;
+}
+#add,#Delete,#update,#search,#display,#addp,#Deletep,#updatep,#searchp,#displayp{
+font-size:25px;
+font-weight:bold;
+}
+#add1,#delete1,#update1,#search1,#display1,#addp1,#deletep1,#updatep1,#searchp1,#displayp1{
+font-size:18px;
+font-weight:bold;
+}
+#refresh{
+font-weight:bold;
+background-color: grey;
+color:white;
+font-size:20px;
+border-radius:10px;
+border-color:white;
+}
+#refresh:hover{
+    background-color: #fb0200;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QListWidget" name="side_menu">
+    <property name="geometry">
+     <rect>
+      <x>-1</x>
+      <y>30</y>
+      <width>250</width>
+      <height>810</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: rgba(0, 0, 0, 255);</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="adminMenu">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>1095</x>
+      <y>100</y>
+      <width>161</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0, 255);</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="customerText">
+    <property name="geometry">
+     <rect>
+      <x>95</x>
+      <y>250</y>
+      <width>151</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700; color:#ffffff;&quot;&gt;Manage&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700; color:#ffffff;&quot;&gt;Customers&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="accMenu">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>1260</x>
+      <y>40</y>
+      <width>191</width>
+      <height>192</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0, 255);</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="exitText">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>770</y>
+      <width>131</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Close&lt;/p&gt;&lt;p&gt;Program&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="accLogo">
+    <property name="geometry">
+     <rect>
+      <x>1455</x>
+      <y>45</y>
+      <width>71</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="pics.qrc">
+      <normaloff>:/accLogo.png</normaloff>:/accLogo.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>60</width>
+      <height>60</height>
+     </size>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="logoMenu">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>30</y>
+      <width>161</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="pics.qrc">
+      <normaloff>:/logo.png</normaloff>:/logo.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>200</width>
+      <height>200</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="homeText">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>160</y>
+      <width>151</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700; color:#ffffff;&quot;&gt;Dashboard&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="adminInfo">
+    <property name="geometry">
+     <rect>
+      <x>1335</x>
+      <y>120</y>
+      <width>101</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Admin Info</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="viewAdminButton">
+    <property name="geometry">
+     <rect>
+      <x>1100</x>
+      <y>120</y>
+      <width>61</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="pics.qrc">
+      <normaloff>:/viewAdmin.png</normaloff>:/viewAdmin.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="signOut">
+    <property name="geometry">
+     <rect>
+      <x>1335</x>
+      <y>180</y>
+      <width>63</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sign out</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="packagesText">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>340</y>
+      <width>151</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Trips &amp;amp;&lt;/p&gt;&lt;p&gt;Packages&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="small_side_menu">
+    <property name="geometry">
+     <rect>
+      <x>-36</x>
+      <y>30</y>
+      <width>121</width>
+      <height>811</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0, 255);</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="editAdminInfo">
+    <property name="geometry">
+     <rect>
+      <x>1160</x>
+      <y>180</y>
+      <width>91</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Update Info</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="adminInfoButton">
+    <property name="geometry">
+     <rect>
+      <x>1270</x>
+      <y>110</y>
+      <width>61</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="pics.qrc">
+      <normaloff>:/profile.png</normaloff>:/profile.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="customer">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>250</y>
+      <width>65</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="pics.qrc">
+      <normaloff>:/customer.png</normaloff>:/customer.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>50</width>
+      <height>50</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="viewAdminInfo">
+    <property name="geometry">
+     <rect>
+      <x>1160</x>
+      <y>130</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>View Info</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="header">
+    <property name="geometry">
+     <rect>
+      <x>-10</x>
+      <y>-10</y>
+      <width>1600</width>
+      <height>41</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="editAdminButton">
+    <property name="geometry">
+     <rect>
+      <x>1100</x>
+      <y>170</y>
+      <width>61</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="pics.qrc">
+      <normaloff>:/editAdmin.png</normaloff>:/editAdmin.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="side_menu_open">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>41</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="pics.qrc">
+      <normaloff>:/menu.svg</normaloff>:/menu.svg</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>35</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="accMenuHead">
+    <property name="geometry">
+     <rect>
+      <x>1282</x>
+      <y>60</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="midLineWidth">
+     <number>101</number>
+    </property>
+    <property name="text">
+     <string>admin</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="packages">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>340</y>
+      <width>65</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="pics.qrc">
+      <normaloff>:/packages.png</normaloff>:/packages.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>50</width>
+      <height>50</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>-11</x>
+      <y>30</y>
+      <width>1561</width>
+      <height>810</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="dashboard">
+     <widget class="QLabel" name="name">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>0</y>
+        <width>741</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>WAY-FINDER TRAVEL AGENCY</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Dbg">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>190</y>
+        <width>351</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+      </property>
+      <property name="margin">
+       <number>21</number>
+      </property>
+      <property name="indent">
+       <number>20</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="backgroundName">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>0</y>
+        <width>1441</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="DText">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>290</y>
+        <width>291</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>LIFETIME REVENUE GENERATED</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="logo">
+      <property name="geometry">
+       <rect>
+        <x>1120</x>
+        <y>3</y>
+        <width>181</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="pics.qrc">
+        <normaloff>:/logo.png</normaloff>:/logo.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>250</width>
+        <height>250</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Cbg">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>190</y>
+        <width>351</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+      <property name="margin">
+       <number>10</number>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Clogo">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>220</y>
+        <width>91</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="pics.qrc">
+        <normaloff>:/users.svg</normaloff>:/users.svg</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>110</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="CText">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>290</y>
+        <width>271</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>LIFETIME TOTAL CUSTOMERS</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Drefresh">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>200</y>
+        <width>41</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">backgrond-color:transparent;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="pics.qrc">
+        <normaloff>:/refresh.svg</normaloff>:/refresh.svg</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="date">
+      <property name="geometry">
+       <rect>
+        <x>1330</x>
+        <y>750</y>
+        <width>191</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Rbg">
+      <property name="geometry">
+       <rect>
+        <x>870</x>
+        <y>460</y>
+        <width>351</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+      </property>
+      <property name="margin">
+       <number>21</number>
+      </property>
+      <property name="indent">
+       <number>20</number>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Crefresh">
+      <property name="geometry">
+       <rect>
+        <x>960</x>
+        <y>200</y>
+        <width>41</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="pics.qrc">
+        <normaloff>:/refresh.svg</normaloff>:/refresh.svg</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="time">
+      <property name="geometry">
+       <rect>
+        <x>1340</x>
+        <y>690</y>
+        <width>171</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>century gothic</family>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Dcount">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>220</y>
+        <width>251</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="lineWidth">
+       <number>176</number>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Pbg">
+      <property name="geometry">
+       <rect>
+        <x>1070</x>
+        <y>190</y>
+        <width>351</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+      <property name="margin">
+       <number>10</number>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Dlogo">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>220</y>
+        <width>91</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="pics.qrc">
+        <normaloff>:/dollar.svg</normaloff>:/dollar.svg</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>100</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="PRbg">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>460</y>
+        <width>351</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+      </property>
+      <property name="margin">
+       <number>21</number>
+      </property>
+      <property name="indent">
+       <number>20</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Ccount">
+      <property name="geometry">
+       <rect>
+        <x>820</x>
+        <y>220</y>
+        <width>111</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="lineWidth">
+       <number>176</number>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="PRcount">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>490</y>
+        <width>251</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="lineWidth">
+       <number>176</number>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="PRrefresh">
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>470</y>
+        <width>41</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">backgrond-color:transparent;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="pics.qrc">
+        <normaloff>:/refresh.svg</normaloff>:/refresh.svg</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="PRlogo">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>490</y>
+        <width>91</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="pics.qrc">
+        <normaloff>:/profit.png</normaloff>:/profit.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>100</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="PRText">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>560</y>
+        <width>291</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>LIFETIME PROFIT GENERATED</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="RText">
+      <property name="geometry">
+       <rect>
+        <x>990</x>
+        <y>560</y>
+        <width>231</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>LIFETIME USER RATINGS</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Rlogo">
+      <property name="geometry">
+       <rect>
+        <x>870</x>
+        <y>490</y>
+        <width>121</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="pics.qrc">
+        <normaloff>:/rate.png</normaloff>:/rate.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>130</width>
+        <height>130</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Rcount">
+      <property name="geometry">
+       <rect>
+        <x>950</x>
+        <y>490</y>
+        <width>251</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="lineWidth">
+       <number>176</number>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Rrefresh">
+      <property name="geometry">
+       <rect>
+        <x>1170</x>
+        <y>470</y>
+        <width>41</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">backgrond-color:transparent;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="pics.qrc">
+        <normaloff>:/refresh.svg</normaloff>:/refresh.svg</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="PText">
+      <property name="geometry">
+       <rect>
+        <x>1140</x>
+        <y>290</y>
+        <width>291</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>CURRENT ACTIVE PACKAGES</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Plogo">
+      <property name="geometry">
+       <rect>
+        <x>1070</x>
+        <y>220</y>
+        <width>91</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="pics.qrc">
+        <normaloff>:/pack.png</normaloff>:/pack.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>100</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Pcount">
+      <property name="geometry">
+       <rect>
+        <x>1150</x>
+        <y>220</y>
+        <width>251</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="lineWidth">
+       <number>176</number>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Prefresh">
+      <property name="geometry">
+       <rect>
+        <x>1370</x>
+        <y>200</y>
+        <width>41</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">backgrond-color:transparent;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="pics.qrc">
+        <normaloff>:/refresh.svg</normaloff>:/refresh.svg</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>25</width>
+        <height>25</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="refresh">
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>385</y>
+        <width>151</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>REFRESH ALL</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="manageCustomer">
+     <widget class="QPushButton" name="updateCustomer">
+      <property name="geometry">
+       <rect>
+        <x>920</x>
+        <y>540</y>
+        <width>241</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="searchCustomer">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>660</y>
+        <width>241</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="updateCustomerIcon">
+      <property name="geometry">
+       <rect>
+        <x>930</x>
+        <y>560</y>
+        <width>61</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normalon>:/update.png</normalon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>60</width>
+        <height>60</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="update1">
+      <property name="geometry">
+       <rect>
+        <x>1010</x>
+        <y>600</y>
+        <width>141</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Customer's Info</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="search">
+      <property name="geometry">
+       <rect>
+        <x>565</x>
+        <y>680</y>
+        <width>101</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>SEARCH</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="update">
+      <property name="geometry">
+       <rect>
+        <x>1030</x>
+        <y>560</y>
+        <width>91</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>UPDATE</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="displayCustomers">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>450</y>
+        <width>201</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="displayCustomerIcon">
+      <property name="geometry">
+       <rect>
+        <x>720</x>
+        <y>457</y>
+        <width>55</width>
+        <height>55</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;add&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normalon>:/display.png</normalon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>60</width>
+        <height>60</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QTreeWidget" name="treeWidget">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>40</y>
+        <width>1040</width>
+        <height>390</height>
+       </rect>
+      </property>
+      <column>
+       <property name="text">
+        <string notr="true">1</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="deleteCustomer">
+      <property name="geometry">
+       <rect>
+        <x>920</x>
+        <y>660</y>
+        <width>241</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="display">
+      <property name="geometry">
+       <rect>
+        <x>795</x>
+        <y>460</y>
+        <width>101</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>DISPLAY</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="search1">
+      <property name="geometry">
+       <rect>
+        <x>538</x>
+        <y>720</y>
+        <width>161</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Customer's Details</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="addCustomer">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>540</y>
+        <width>241</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Delete">
+      <property name="geometry">
+       <rect>
+        <x>1035</x>
+        <y>680</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>DELETE</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="delete1">
+      <property name="geometry">
+       <rect>
+        <x>1000</x>
+        <y>720</y>
+        <width>161</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Customer Record</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="display1">
+      <property name="geometry">
+       <rect>
+        <x>780</x>
+        <y>490</y>
+        <width>121</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>All Customers</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="add1">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>600</y>
+        <width>141</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>New Customer</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="add">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>560</y>
+        <width>91</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ADD</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="addCustomerIcon">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>560</y>
+        <width>61</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normalon>:/add.png</normalon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>60</width>
+        <height>60</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="searchCustomerIcon">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>680</y>
+        <width>61</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normalon>:/search.png</normalon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>60</width>
+        <height>60</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="deleteCustomerIcon">
+      <property name="geometry">
+       <rect>
+        <x>930</x>
+        <y>680</y>
+        <width>61</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="pics.qrc">
+        <normaloff>:/delete.png</normaloff>:/delete.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>60</width>
+        <height>60</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="sortupid">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>52</y>
+        <width>16</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="pics.qrc">
+        <normaloff>:/sortuparrow.png</normaloff>:/sortuparrow.png</iconset>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="sortupname">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>52</y>
+        <width>16</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="pics.qrc">
+        <normaloff>:/sortuparrow.png</normaloff>:/sortuparrow.png</iconset>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="TripsPackages">
+     <widget class="QPushButton" name="addPackage">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>540</y>
+        <width>241</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QTreeWidget" name="treeWidgetP">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>40</y>
+        <width>1040</width>
+        <height>390</height>
+       </rect>
+      </property>
+      <column>
+       <property name="text">
+        <string notr="true">1</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="addPackageIcon">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>560</y>
+        <width>61</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normalon>:/addPackage.png</normalon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>70</width>
+        <height>70</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="displayPackage">
+      <property name="geometry">
+       <rect>
+        <x>710</x>
+        <y>450</y>
+        <width>201</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="displayPackageIcon">
+      <property name="geometry">
+       <rect>
+        <x>720</x>
+        <y>457</y>
+        <width>55</width>
+        <height>55</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;add&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="pics.qrc">
+        <normaloff>:/displayPackage.png</normaloff>:/displayPackage.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>55</width>
+        <height>55</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="searchPackage">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>660</y>
+        <width>241</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="addp1">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>600</y>
+        <width>141</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>New Package</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="displayp">
+      <property name="geometry">
+       <rect>
+        <x>795</x>
+        <y>460</y>
+        <width>101</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>DISPLAY</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="updatePackage">
+      <property name="geometry">
+       <rect>
+        <x>920</x>
+        <y>540</y>
+        <width>241</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="searchp">
+      <property name="geometry">
+       <rect>
+        <x>565</x>
+        <y>680</y>
+        <width>101</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>SEARCH</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="displayp1">
+      <property name="geometry">
+       <rect>
+        <x>785</x>
+        <y>490</y>
+        <width>121</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>All Packages</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="searchp1">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>720</y>
+        <width>161</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Package's Details</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="deletePackage">
+      <property name="geometry">
+       <rect>
+        <x>920</x>
+        <y>660</y>
+        <width>241</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="addp">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>560</y>
+        <width>61</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ADD</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="updatePackageIcon">
+      <property name="geometry">
+       <rect>
+        <x>930</x>
+        <y>560</y>
+        <width>65</width>
+        <height>65</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normalon>:/updatePackage.png</normalon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>65</width>
+        <height>70</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="updatep">
+      <property name="geometry">
+       <rect>
+        <x>1030</x>
+        <y>560</y>
+        <width>91</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>UPDATE</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="updatep1">
+      <property name="geometry">
+       <rect>
+        <x>1010</x>
+        <y>600</y>
+        <width>141</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Package's Info</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="searchPackageIcon">
+      <property name="geometry">
+       <rect>
+        <x>465</x>
+        <y>675</y>
+        <width>71</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normalon>:/searchPackage.png</normalon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>65</width>
+        <height>70</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="deletePackageIcon">
+      <property name="geometry">
+       <rect>
+        <x>925</x>
+        <y>675</y>
+        <width>71</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normalon>:/searchPackage.png</normalon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>65</width>
+        <height>70</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Deletep">
+      <property name="geometry">
+       <rect>
+        <x>1025</x>
+        <y>680</y>
+        <width>101</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>DELETE</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="deletep1">
+      <property name="geometry">
+       <rect>
+        <x>1000</x>
+        <y>720</y>
+        <width>161</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Package Record</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="sortupprice">
+      <property name="geometry">
+       <rect>
+        <x>672</x>
+        <y>52</y>
+        <width>16</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="pics.qrc">
+        <normaloff>:/sortuparrow.png</normaloff>:/sortuparrow.png</iconset>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="sortuptravelers">
+      <property name="geometry">
+       <rect>
+        <x>823</x>
+        <y>52</y>
+        <width>16</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="pics.qrc">
+        <normaloff>:/sortuparrow.png</normaloff>:/sortuparrow.png</iconset>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="signOutButton">
+    <property name="geometry">
+     <rect>
+      <x>1270</x>
+      <y>170</y>
+      <width>61</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="pics.qrc">
+      <normaloff>:/logout.png</normaloff>:/logout.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="home">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>160</y>
+      <width>65</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="pics.qrc">
+      <normaloff>:/home.svg</normaloff>:/home.svg</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>45</width>
+      <height>50</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="exit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>770</y>
+      <width>65</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="pics.qrc">
+      <normaloff>:/exit.png</normaloff>:/exit.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>55</width>
+      <height>55</height>
+     </size>
+    </property>
+   </widget>
+   <zorder>stackedWidget</zorder>
+   <zorder>side_menu</zorder>
+   <zorder>adminMenu</zorder>
+   <zorder>customerText</zorder>
+   <zorder>accMenu</zorder>
+   <zorder>exitText</zorder>
+   <zorder>accLogo</zorder>
+   <zorder>logoMenu</zorder>
+   <zorder>homeText</zorder>
+   <zorder>adminInfo</zorder>
+   <zorder>viewAdminButton</zorder>
+   <zorder>signOut</zorder>
+   <zorder>packagesText</zorder>
+   <zorder>small_side_menu</zorder>
+   <zorder>editAdminInfo</zorder>
+   <zorder>adminInfoButton</zorder>
+   <zorder>customer</zorder>
+   <zorder>viewAdminInfo</zorder>
+   <zorder>header</zorder>
+   <zorder>editAdminButton</zorder>
+   <zorder>side_menu_open</zorder>
+   <zorder>accMenuHead</zorder>
+   <zorder>packages</zorder>
+   <zorder>signOutButton</zorder>
+   <zorder>home</zorder>
+   <zorder>exit</zorder>
+  </widget>
+ </widget>
+ <resources>
+  <include location="pics.qrc"/>
+ </resources>
+ <connections/>
+</ui>

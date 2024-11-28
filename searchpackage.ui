@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>searchPackage</class>
+ <widget class="QDialog" name="searchPackage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>747</width>
+    <height>425</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{font-family:century gothic;
+color:white;
+}
+#head{
+border-bottom-left-radius:15px;
+border-bottom-right-radius:15px;
+background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 #F4D03F, stop:0.75 #16A085);
+font-size:24px;
+font-weight:bold;
+}
+#searchPackage{
+background:#282828;
+}
+QLineEdit{
+font-size:16px;
+background:white;
+color:black;
+font-weight:bold;
+}
+QTreeWidget{
+color:black;
+background:white;
+}
+QLabel{
+font-size:16px;
+}
+QPushButton {
+font-size:15px;
+font-weight:bold;
+border:none;
+border-radius:5px;
+background: #ff0303;
+}
+
+QPushButton:hover {
+background:#49ebff;
+color:black;
+}
+
+QComboBox QAbstractItemView {
+font-size:16px;
+background-color:#3e3f40;
+color:white;
+}
+#packageDescriptionShow{
+color:black;
+font-size:15px;
+background-color:white;
+}</string>
+  </property>
+  <widget class="QLabel" name="packageDetailsLabel">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>145</y>
+     <width>141</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Package Details</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cancelButton">
+   <property name="geometry">
+    <rect>
+     <x>663</x>
+     <y>390</y>
+     <width>84</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Back</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="head">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>751</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>SEARCH PACKAGE</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget_3">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>60</y>
+     <width>711</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <widget class="QLabel" name="packageLabel">
+      <property name="text">
+       <string>Select Package</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="packageSelect">
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QTreeWidget" name="packageDetailsView">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>170</y>
+     <width>711</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string notr="true">1</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QListWidget" name="packageDescriptionShow">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>312</y>
+     <width>711</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>century gothic</family>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="lineWidth">
+    <number>1</number>
+   </property>
+   <property name="midLineWidth">
+    <number>0</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="packageDescriptionLabel">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>280</y>
+     <width>711</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Package Description</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

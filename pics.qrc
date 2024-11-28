@@ -1,0 +1,39 @@
+<RCC>
+    <qresource prefix="/">
+        <file>dollar.svg</file>
+        <file>home.svg</file>
+        <file>menu.svg</file>
+        <file>refresh.svg</file>
+        <file>search.svg</file>
+        <file>users.svg</file>
+        <file>x.svg</file>
+        <file>system.jpg</file>
+        <file>accLogo.png</file>
+        <file>add.png</file>
+        <file>addPackage.png</file>
+        <file>customer.png</file>
+        <file>delete.png</file>
+        <file>deletePackage.png</file>
+        <file>display.png</file>
+        <file>displayPackage.png</file>
+        <file>editAdmin.png</file>
+        <file>exit.png</file>
+        <file>eyes.png</file>
+        <file>FINAL.png</file>
+        <file>image.png</file>
+        <file>logo.png</file>
+        <file>logout.png</file>
+        <file>pack.png</file>
+        <file>packages.png</file>
+        <file>profile.png</file>
+        <file>profit.png</file>
+        <file>rate.png</file>
+        <file>search.png</file>
+        <file>searchPackage.png</file>
+        <file>update.png</file>
+        <file>updatePackage.png</file>
+        <file>viewAdmin.png</file>
+        <file>sortuparrow.png</file>
+        <file>sortdownarrow.png</file>
+    </qresource>
+</RCC>

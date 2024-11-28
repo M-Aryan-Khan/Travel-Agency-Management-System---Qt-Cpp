@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>updateUsers</class>
+ <widget class="QDialog" name="updateUsers">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>660</width>
+    <height>573</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{font-family:century gothic;
+color:white;
+}
+QLabel{
+font-size:16px;
+}
+#head{
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 20px;
+background:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 #FFE53B, stop:0.74 #FF2525);
+font-size:24px;
+font-weight:bold;
+}
+QLineEdit{
+font-size:16px;
+font-weight:bold;
+color:black;
+background:white;
+}
+#updateUsers{
+background:#282828;
+}
+#packageDescriptionShow{
+color:black;
+font-size:15px;
+background-color:white;
+}
+QComboBox{
+font-size:16px;
+background:#3e3f40;
+}
+#birthdayValidate, #pExpiryValidate, #cellValidate, #homeValidate{
+font-size:12px;
+color:red;
+background:transparent;
+}
+QComboBox QAbstractItemView {
+font-size:16px;
+background-color:#3e3f40;
+color:white;
+}
+QPushButton {
+font-size:15px;
+font-weight:bold;
+border:none;
+border-radius:5px;
+background: #ff0303;
+}
+
+QPushButton:hover {
+background:#49ebff;
+color:black;
+}</string>
+  </property>
+  <widget class="QPushButton" name="saveButton">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>540</y>
+     <width>81</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>160</y>
+     <width>641</width>
+     <height>57</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="2">
+     <widget class="QLabel" name="passportExpLabel">
+      <property name="text">
+       <string>Passport Expiry Date</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="passportEdit"/>
+    </item>
+    <item row="1" column="2">
+     <widget class="QLineEdit" name="passportExpEdit">
+      <property name="placeholderText">
+       <string>mm/dd/yy</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="birthdayLabel">
+      <property name="text">
+       <string>Birthday mm/dd/yy</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLineEdit" name="birthdayEdit">
+      <property name="placeholderText">
+       <string>mm/dd/yy</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLabel" name="passportLabel">
+      <property name="text">
+       <string>Passport Number</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="packageLabel">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>450</y>
+     <width>121</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Select Package</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>60</y>
+     <width>241</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QLabel" name="getIdLabel">
+      <property name="text">
+       <string>Customer ID</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="getIdEdit"/>
+    </item>
+    <item>
+     <widget class="QPushButton" name="searchButton">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="pics.qrc">
+        <normaloff>:/search.svg</normaloff>:/search.svg</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>23</width>
+        <height>22</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget_3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>240</y>
+     <width>641</width>
+     <height>57</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="0" column="2">
+     <widget class="QLabel" name="postalLabel">
+      <property name="text">
+       <string>Postal Code/Zip Code</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="cityEdit"/>
+    </item>
+    <item row="1" column="2">
+     <widget class="QLineEdit" name="postalEdit"/>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="addressLabel">
+      <property name="text">
+       <string>Street Address</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLineEdit" name="addressEdit"/>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLabel" name="cityLabel">
+      <property name="text">
+       <string>City</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget_4">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>300</y>
+     <width>641</width>
+     <height>57</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_4">
+    <item row="0" column="2">
+     <widget class="QLabel" name="cellPhoneLabel">
+      <property name="text">
+       <string>Cell Phone</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="homePhoneEdit">
+      <property name="placeholderText">
+       <string>XXXX-XXXXXXX</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QLineEdit" name="cellPhoneEdit">
+      <property name="placeholderText">
+       <string>XXXX-XXXXXXX</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="countryLabel">
+      <property name="text">
+       <string>Country</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLineEdit" name="countryEdit"/>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLabel" name="homePhoneLabel">
+      <property name="text">
+       <string>Home Phone</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QComboBox" name="packageSelect">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>450</y>
+     <width>511</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="head">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>-1</y>
+     <width>660</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>UPDATE CUSTOMER DETAILS</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>490</y>
+     <width>281</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <item>
+     <widget class="QLabel" name="ratingsLabel">
+      <property name="text">
+       <string>Ratings Given By Customer</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="ratingsSelect">
+      <item>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>5</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget_11">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>380</y>
+     <width>641</width>
+     <height>57</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_11">
+    <item row="0" column="0">
+     <widget class="QLabel" name="numOftravLabel">
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="toolTipDuration">
+       <number>-1</number>
+      </property>
+      <property name="text">
+       <string>Number Of Partcipants</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLineEdit" name="numOfTravEdit"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="cancelButton">
+   <property name="geometry">
+    <rect>
+     <x>575</x>
+     <y>540</y>
+     <width>81</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancel</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>100</y>
+     <width>641</width>
+     <height>57</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="2">
+     <widget class="QLabel" name="lastNameLabel">
+      <property name="text">
+       <string>Last Name</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="middleNameEdit"/>
+    </item>
+    <item row="1" column="2">
+     <widget class="QLineEdit" name="lastNameEdit"/>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="firstNameLabel">
+      <property name="text">
+       <string>First Name</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLineEdit" name="firstNameEdit"/>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLabel" name="middleNameLabel">
+      <property name="text">
+       <string>Middle Name</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="pExpiryValidate">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>215</y>
+     <width>211</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>century gothic</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <bold>false</bold>
+     <underline>false</underline>
+     <strikeout>false</strikeout>
+     <kerning>true</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>follow the format &quot;mm/dd/yy&quot;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="homeValidate">
+   <property name="geometry">
+    <rect>
+     <x>225</x>
+     <y>360</y>
+     <width>211</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>century gothic</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <bold>false</bold>
+     <underline>false</underline>
+     <strikeout>false</strikeout>
+     <kerning>true</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>follow the format &quot;xxxx-xxxxxxx&quot;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="birthdayValidate">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>220</y>
+     <width>211</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>century gothic</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <bold>false</bold>
+     <underline>false</underline>
+     <strikeout>false</strikeout>
+     <kerning>true</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>follow the format &quot;mm/dd/yy&quot;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="cellValidate">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>360</y>
+     <width>211</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>century gothic</family>
+     <pointsize>-1</pointsize>
+     <italic>true</italic>
+     <bold>false</bold>
+     <underline>false</underline>
+     <strikeout>false</strikeout>
+     <kerning>true</kerning>
+    </font>
+   </property>
+   <property name="text">
+    <string>follow the format &quot;xxxx-xxxxxxx&quot;</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="pics.qrc"/>
+ </resources>
+ <connections/>
+</ui>
